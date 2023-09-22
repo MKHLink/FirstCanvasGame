@@ -2,7 +2,10 @@ const canvas = document.getElementById('canvas');
 
 const context = canvas.getContext("2d");
 
-context.moveTo(0,0);
+var player = new Image();
 
-context.lineTo(1000,100);
-context.stroke();
+player.src = 'mau.png';
+
+player.onload = function(){
+    context.drawImage(player, 400,400);
+}
